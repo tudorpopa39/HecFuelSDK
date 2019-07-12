@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HecFuelSDK"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "This is HecFuelSDK for developers."
 
   spec.description  = "This is HecFuel SDK for developers in refuelling."
