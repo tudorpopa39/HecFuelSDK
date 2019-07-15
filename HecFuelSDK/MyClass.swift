@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 public class MyClass {
     
@@ -22,5 +23,18 @@ public class MyClass {
         view.backgroundColor = .red
         
         return view
+    }
+    
+    //https://jsonplaceholder.typicode.com/posts/42
+    public func request(url: String) {
+        
+        guard let url = URL(string: url) else {
+            assertionFailure("URL seems to be wrong")
+            return
+        }
+        
+        Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default).responseJSON { (dataResponse) in
+            print(dataResponse)
+        }
     }
 }

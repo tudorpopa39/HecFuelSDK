@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BBF8F70D102927F83D425E3 /* Pods_HecFuelSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412AB9628CE35B31FA6F3818 /* Pods_HecFuelSDK.framework */; };
 		6E35DA7D22D368EE00116BB8 /* hecfuel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E35DA7B22D368EE00116BB8 /* hecfuel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E35DA8422D3695100116BB8 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35DA8322D3695100116BB8 /* MyClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		314C77114C10BA961FCC21C1 /* Pods-HecFuelSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HecFuelSDK.debug.xcconfig"; path = "Target Support Files/Pods-HecFuelSDK/Pods-HecFuelSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		412AB9628CE35B31FA6F3818 /* Pods_HecFuelSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HecFuelSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E35DA7822D368EE00116BB8 /* HecFuelSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HecFuelSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E35DA7B22D368EE00116BB8 /* hecfuel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hecfuel.h; sourceTree = "<group>"; };
 		6E35DA7C22D368EE00116BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E35DA8322D3695100116BB8 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		E57315C76F0B48543CE5C60E /* Pods-HecFuelSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HecFuelSDK.release.xcconfig"; path = "Target Support Files/Pods-HecFuelSDK/Pods-HecFuelSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,18 +27,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBF8F70D102927F83D425E3 /* Pods_HecFuelSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100A413B368DC1E8CCB5BB4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				314C77114C10BA961FCC21C1 /* Pods-HecFuelSDK.debug.xcconfig */,
+				E57315C76F0B48543CE5C60E /* Pods-HecFuelSDK.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6E35DA6E22D368EE00116BB8 = {
 			isa = PBXGroup;
 			children = (
 				6E35DA7A22D368EE00116BB8 /* HecFuelSDK */,
 				6E35DA7922D368EE00116BB8 /* Products */,
 				F6DD6DB0AD457FBA7B351676 /* Frameworks */,
+				100A413B368DC1E8CCB5BB4D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +75,7 @@
 		F6DD6DB0AD457FBA7B351676 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				412AB9628CE35B31FA6F3818 /* Pods_HecFuelSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E35DA8022D368EE00116BB8 /* Build configuration list for PBXNativeTarget "HecFuelSDK" */;
 			buildPhases = (
+				58AADC8CA445802CFE6623E5 /* [CP] Check Pods Manifest.lock */,
 				6E35DA7322D368EE00116BB8 /* Headers */,
 				6E35DA7422D368EE00116BB8 /* Sources */,
 				6E35DA7522D368EE00116BB8 /* Frameworks */,
@@ -136,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58AADC8CA445802CFE6623E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HecFuelSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E35DA7422D368EE00116BB8 /* Sources */ = {
@@ -273,6 +316,7 @@
 		};
 		6E35DA8122D368EE00116BB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 314C77114C10BA961FCC21C1 /* Pods-HecFuelSDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -303,6 +347,7 @@
 		};
 		6E35DA8222D368EE00116BB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E57315C76F0B48543CE5C60E /* Pods-HecFuelSDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
