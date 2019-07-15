@@ -1,0 +1,4 @@
+framework module HecFuelSDK {
+  header "HecFuelSDK-Swift.h"
+  requires objc
+}
