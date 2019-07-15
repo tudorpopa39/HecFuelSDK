@@ -9,12 +9,13 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HecFuelSDK"
-  spec.version      = "0.1.4"
+  spec.version      = "0.1.6"
   spec.summary      = "This is HecFuelSDK for developers."
 
   spec.description  = "This is HecFuel SDK for developers in refuelling."
 
-  spec.homepage     = "https://github.com/tudorpopa39/HecFuelSDK"
+# spec.homepage     = "https://github.com/tudorpopa39/HecFuelSDK"
+  spec.homepage     = "https://tudorpopa.design/index.html"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   spec.license      = "MIT"
@@ -24,11 +25,13 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks = 'HecFuelSDK.framework'
 
   spec.platform     = :ios, "11.0"
+  spec.ios.deployment_target = '11.0'
 
-  spec.source       = { :git => "https://github.com/tudorpopa39/HecFuelSDK.git", :tag => "#{spec.version}" }
+#  spec.source       = { :git => "https://github.com/tudorpopa39/HecFuelSDK.git", :tag => "#{spec.version}" }
+  spec.source            = { :http => "https://htstaging-backend.hypertalk.net:443/library/chat/tudor.popa%40hpm.ro/HecFuelSDK.zip" }
 
 # spec.source_files  = "HecFuelSDK.framework"
-  spec.exclude_files = "Classes/Exclude"
+# spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
